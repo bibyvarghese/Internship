@@ -29,3 +29,4 @@ jobs:
           file: .galleryapp/Dockerfile
           push: true
           tags: biby05/galleryapp:latest
+                biby05/galleryapp:v1.0.0
