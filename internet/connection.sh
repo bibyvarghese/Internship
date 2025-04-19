@@ -3,7 +3,7 @@
 # === CONFIGURATION ===
 
 # Discord Webhook URL
-WEBHOOK_URL="https://discord.com/api/webhooks/YOUR_WEBHOOK_ID/YOUR_TOKEN"
+WEBHOOK_URL="https://discord.com/api/webhooks/1363246701074321469/xIJurCW_KN-slv9_E9v6HawTtrllu3Si3UbfBM8HTMBpmL5OR3RFQ_ICUHRKd8WdpvSi"
 
 # Email settings
 TO_EMAIL="bibyvarghese2001@gmail.com"
