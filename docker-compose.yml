@@ -1,18 +1,25 @@
-version: '3.8'
-
+version: "3"
 services:
   mongo:
     image: mongo
-    container_name: mongo
+    container_name: mongodb
     ports:
       - "27017:27017"
+    networks:
+      - app-network
 
-  galleryapp:
-    image: biby05/galleryapp:latest
+  app:
+    image: biby05/galleryapp
     container_name: galleryapp
     ports:
       - "3000:3000"
     environment:
-      - MONGODB_URI=mongodb://mongo:27017/gallerydb
+      - MONGO_URL=mongodb://mongo:27017/gallerydb
     depends_on:
       - mongo
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
