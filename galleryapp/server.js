@@ -5,7 +5,7 @@ const multer = require('multer');
 const path = require('path');
 const bodyParser = require('body-parser');
 const app = express();
-const MONGO_URI = process.env.MONGO_URI || 'mongodb://mongo:27017/galleryapp';
+const MONGO_URI = process.env.MONGO_URI || 'mongodb://172.17.0.1:27017/galleryapp';
 
 
 // Connect to MongoDB
