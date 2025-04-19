@@ -7,7 +7,7 @@ on:
     branches: [main]
 
 jobs:
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
@@ -37,3 +37,9 @@ jobs:
           context: .
           push: true
           tags: biby05/galleryapp:latest
+
+      - name: Set up Docker Compose
+        run: |
+          docker-compose down
+          docker-compose pull
+          docker-compose up -d --build
