@@ -5,7 +5,7 @@ FROM node:16-alpine
 WORKDIR /app
 
 # Copy package.json and package-lock.json (if present) to the working directory
-COPY package*.json ./
+COPY package*.json ./galleryapp/
 
 # Clear npm cache to avoid issues with previous builds
 RUN npm cache clean --force
