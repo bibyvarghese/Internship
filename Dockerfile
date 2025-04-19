@@ -18,7 +18,7 @@ RUN node -v
 RUN npm -v
 
 # Install dependencies
-RUN npm install
+RUN npm install --verbose
 
 # Copy the rest of the application code to the container
 COPY . .
