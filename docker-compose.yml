@@ -1,25 +1,29 @@
-version: "3"
+version: '3.7'
+
 services:
-  mongo:
+  mongodb:
     image: mongo
     container_name: mongodb
     ports:
-      - "27018:27017"
+      - "27018:27017"  # map container port to host port
     networks:
-      - app-network
+      - backend
+    volumes:
+      - mongodb_data:/data/db
 
-  app:
-    image: biby05/galleryapp
+  galleryapp:
+    build: .
     container_name: galleryapp
     ports:
-      - "3001:3000"
-    environment:
-      - MONGO_URL=mongodb://mongo:27017/gallerydb
+      - "3000:3000"
     depends_on:
-      - mongo
+      - mongodb
     networks:
-      - app-network
+      - backend
 
 networks:
-  app-network:
+  backend:
     driver: bridge
+
+volumes:
+  mongodb_data:
