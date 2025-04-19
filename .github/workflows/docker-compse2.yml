@@ -1,0 +1,17 @@
+version: '3'
+services:
+  mongo:
+    image: mongo
+    container_name: mongo
+    ports:
+      - "27017:27017"
+
+  app:
+    image: biby05/galleryapp
+    container_name: galleryapp
+    ports:
+      - "3000:3000"
+    depends_on:
+      - mongo
+    environment:
+      - MONGODB_URI=mongodb://mongo:27017/gallerydb
