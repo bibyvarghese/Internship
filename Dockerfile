@@ -1,26 +1,29 @@
-# Use official Node.js LTS image
-FROM node:18-alpine
+# Use an official Node.js runtime as a parent image
+FROM node:16
 
-# Set the working directory inside the container
+# Set the working directory in the container
 WORKDIR /app
 
-# Copy only the package files first to install dependencies
+# Copy package.json and package-lock.json (if present) to the working directory
 COPY package*.json ./
 
-# Install Node.js dependencies
+# Clear npm cache to avoid issues with previous builds
+RUN npm cache clean --force
+
+# Install dependencies
 RUN npm install
 
-# Copy the rest of the application
+# Copy the rest of the application code to the container
 COPY . .
 
-# Create the uploads folder (for file uploads) if it doesn't exist
-RUN mkdir -p uploads
+# Ensure proper permissions for files and directories
+RUN chown -R node:node /app
 
-# Expose port the app runs on
+# Switch to the non-root user (node)
+USER node
+
+# Expose the port your app runs on (adjust as needed)
 EXPOSE 3000
 
-# Set environment variable for production (optional)
-ENV NODE_ENV=development
-
-# Start the server
-CMD ["node", "server.js"]
+# Run the app
+CMD ["npm", "start"]
