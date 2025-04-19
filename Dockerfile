@@ -4,6 +4,9 @@ FROM node:16-alpine
 # Set the working directory in the container
 WORKDIR /app
 
+RUN ls -la /app
+
+
 # Copy package.json and package-lock.json (if present) to the working directory
 COPY package*.json ./galleryapp/
 
