@@ -1,5 +1,5 @@
 # Use an official Node.js runtime as a parent image
-FROM node:16
+FROM node:16-alpine
 
 # Set the working directory in the container
 WORKDIR /app
@@ -9,6 +9,10 @@ COPY package*.json ./
 
 # Clear npm cache to avoid issues with previous builds
 RUN npm cache clean --force
+
+# Debug step to verify npm and node versions
+RUN node -v
+RUN npm -v
 
 # Install dependencies
 RUN npm install
