@@ -269,4 +269,6 @@ Tim e  0  C u r r e0n t
   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                                  Dload  Upload   Total   Spent    Left  Speed
   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   171  100    79  100    92     65     76  0:00:01  0:00:01 --:--:--   141100   171  100    79  100    92     65     76  0:00:01  0:00:01 --:--:--   141
-{"message": "You are being rate limited.", "retry_after": 0.3, "global": false}
+{"message": "You are being rate limited.", "retry_after": 0.3, "global": false}  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100    92    0     0  100    92      0    188 --:--:-- --:--:-- --:--:--   188100    92    0     0  100    92      0    130 --:--:-- --:--:-- --:--:--   129
