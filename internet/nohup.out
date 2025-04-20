@@ -265,3 +265,8 @@ Tim e  0  C u r r e0n t
   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100    92    0     0  100    92      0    117 --:--:-- --:--:-- --:--:--   118
 ./connection.sh: line 60: /path/to/internet_connectivity.log: No such file or directory
 ❌ Internet is DOWN at 2025-04-20 11:34:56
+❌ Internet is DOWN at 2025-04-20 11:35:19
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   171  100    79  100    92     65     76  0:00:01  0:00:01 --:--:--   141100   171  100    79  100    92     65     76  0:00:01  0:00:01 --:--:--   141
+{"message": "You are being rate limited.", "retry_after": 0.3, "global": false}
