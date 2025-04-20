@@ -153,4 +153,4 @@ app.get('/api/profile', async (req, res) => {
 });
 
 // Start Server
-app.listen(3000, () => console.log('Server running on http://localhost:3000'));
+app.listen(3000, () => console.log('Server running on 192.168.202.47:3000'));
