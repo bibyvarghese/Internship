@@ -10,7 +10,7 @@ TO_EMAIL="bibyvarghese2001@gmail.com"
 SUBJECT="🌐 Internet Connectivity Alert"
 
 # Log file for down events
-LOG_FILE="/path/to/internet_connectivity.log"
+LOG_FILE="/home/biby/Intership/internet/connection.log"
 
 # === MONITOR LOOP ===
 
